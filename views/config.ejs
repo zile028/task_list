@@ -1,0 +1,15 @@
+<%- include('partials/top.ejs') %>
+<h2>Category</h2>
+<% categoryes.forEach(category => { %>
+<div>
+<p style="background-color: <%= category.color %>"><%= category.categoryName %></p>
+</div>
+<% }) %>
+<h2>Priority</h2>
+<% priorityes.forEach(priority => { %>
+    <div>
+    <p style="background-color: <%= priority.color %>"><%= priority.priorityName %></p>
+    </div>
+    <% }) %>
+
+<%- include('partials/bottom.ejs') %>
