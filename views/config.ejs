@@ -1,15 +1,23 @@
 <%- include('partials/top.ejs') %>
 <h2>Category</h2>
 <% categoryes.forEach(category => { %>
-<div>
-<p style="background-color: <%= category.color %>"><%= category.categoryName %></p>
-</div>
-<% }) %>
+    <div style="background-color: <%= category.color; %>"
+         class="py-1 px-2 text-white rounded-2 d-flex justify-content-between align-items-center mb-2">
+        <p class="m-0"><%= category.categoryName; %></p>
+        <div>
+            <a class="btn btn-warning btn-sm text-white" href="/category/edit/<%= category.id %>"><i
+                        class="bi bi-gear"></i></a>
+            <a class="btn btn-danger btn-sm text-white" href="/category/delete/<%= category.id %>"><i
+                        class="bi bi-trash"></i></a>
+        </div>
+    </div>
+<% }); %>
+<a href="/category/add" class="btn btn-primary w-100"><i class="bi bi-plus"></i></a>
 <h2>Priority</h2>
 <% priorityes.forEach(priority => { %>
     <div>
-    <p style="background-color: <%= priority.color %>"><%= priority.priorityName %></p>
+        <p style="background-color: <%= priority.color; %>"><%= priority.priorityName; %></p>
     </div>
-    <% }) %>
+<% }); %>
 
 <%- include('partials/bottom.ejs') %>

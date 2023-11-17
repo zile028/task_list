@@ -1,9 +1,10 @@
 <%- include('partials/top.ejs') %>
-
-<a href="/task/all">All tasks</a>
-<a href="/category">Category</a>
-<a href="/priority">Priority</a>
-<a href="/config">Config</a>
+<div class="d-flex flex-column gap-2 h-100 justify-content-center">
+    <a class="py-4 btn btn-primary" href="/task/all">All tasks</a>
+    <a class="py-4 btn btn-warning" href="/category">Category</a>
+    <a class="py-4 btn btn-danger" href="/priority">Priority</a>
+    <a class="py-4 btn btn-dark" href="/config">Config</a>
+</div>
 
 <%- include('partials/bottom.ejs') %>
 
