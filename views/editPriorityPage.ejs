@@ -1,0 +1,10 @@
+<%- include('partials/top.ejs') %>
+<form action="/priority/edit" method="post">
+    <h3>Update priority</h3>
+    <input type="hidden" name="id" value="<%= priority.id %>">
+    <input class="form-control mb-3" type="text" name="priorityName" value="<%= priority.priorityName %>">
+    <input class="mb-3 w-100" style="height: 50px" type="color" name="color" value="<%= priority.color %>">
+    <button class="btn btn-primary form-control">Update</button>
+</form>
+
+<%- include('partials/bottom.ejs') %>

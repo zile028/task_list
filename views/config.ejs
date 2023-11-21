@@ -14,10 +14,19 @@
 <% }); %>
 <a href="/category/add" class="btn btn-primary w-100"><i class="bi bi-plus"></i></a>
 <h2>Priority</h2>
-<% priorityes.forEach(priority => { %>
-    <div>
-        <p style="background-color: <%= priority.color; %>"><%= priority.priorityName; %></p>
+<% priorityes.forEach(priority => { %>     
+        <div style="background-color: <%= priority.color; %>"
+            class="py-1 px-2 text-white rounded-2 d-flex justify-content-between align-items-center mb-2">
+            <p class="m-0"><%= priority.priorityName; %></p>
+        <div>
+           
+            <a class="btn btn-warning btn-sm text-white" href="/priority/edit/<%= priority.id %>"><i
+                class="bi bi-gear"></i></a>
+            <a class="btn btn-danger btn-sm text-white" href="/priority/delete/<%= priority.id %>"><i
+                class="bi bi-trash"></i></a>
+        </div>
     </div>
 <% }); %>
+<a href="/priority/add" class="btn btn-primary w-100"><i class="bi bi-plus"></i></a>
 
 <%- include('partials/bottom.ejs') %>

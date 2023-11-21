@@ -1,0 +1,9 @@
+<%- include('partials/top.ejs') %>
+<form action="/priority/add" method="post">
+    <h3>Add priority</h3>
+    <input class="form-control mb-3" type="text" name="priorityName" placeholder="Priority name">
+    <input class="mb-3 w-100" style="height: 50px" type="color" name="color">
+    <button class="btn btn-primary form-control">Add</button>
+</form>
+
+<%- include('partials/bottom.ejs') %>
