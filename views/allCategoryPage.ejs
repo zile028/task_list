@@ -1,0 +1,15 @@
+<%- include('partials/top.ejs') %>
+<h3>All categories</h3>
+<div class="categories">
+	<% categories.forEach(category => { %>
+	<a
+		class="btn py-4 px-1"
+		style="background-color: <%= category.color %>;"
+		href="/task/category/<%= category.id %>"
+	>
+		<span><%= category.categoryName %></span><br />
+		<span>Tasks: <%= category.numTask %></span>
+	</a>
+	<% }) %>
+</div>
+<%- include('partials/bottom.ejs') %>
